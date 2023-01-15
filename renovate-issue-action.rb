@@ -6,21 +6,21 @@ class RenovateIssueAction < Formula
   desc "Create, update, and close GitHub Issues with GitHub Actions according to Renovate Pull Requests
 "
   homepage "https://github.com/suzuki-shunsuke/renovate-issue-action"
-  version "0.3.1"
+  version "0.3.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/suzuki-shunsuke/renovate-issue-action/releases/download/v0.3.1/renovate-issue-action_darwin_arm64.tar.gz"
-      sha256 "66d0ca266c106b8a28c7213a7c1d9fd5fec8305504d0848b01c50c78feb03863"
+    if Hardware::CPU.intel?
+      url "https://github.com/suzuki-shunsuke/renovate-issue-action/releases/download/v0.3.2/renovate-issue-action_darwin_amd64.tar.gz"
+      sha256 "98f9c84c22ecfcb9b8c9a59fcafd927d5bd09fb3789fe99b7f19ad9b8c1a672c"
 
       def install
         bin.install "renovate-issue-action"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/suzuki-shunsuke/renovate-issue-action/releases/download/v0.3.1/renovate-issue-action_darwin_amd64.tar.gz"
-      sha256 "6ad7dafe1e4cbcab3178ff7af8080ec80815c879031e38009aa02ef6bdf95400"
+    if Hardware::CPU.arm?
+      url "https://github.com/suzuki-shunsuke/renovate-issue-action/releases/download/v0.3.2/renovate-issue-action_darwin_arm64.tar.gz"
+      sha256 "4f14858a951ab4f840495bdf72eb9c6c7aaec7753679e49ab678d399f4604355"
 
       def install
         bin.install "renovate-issue-action"
@@ -30,16 +30,16 @@ class RenovateIssueAction < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/suzuki-shunsuke/renovate-issue-action/releases/download/v0.3.1/renovate-issue-action_linux_arm64.tar.gz"
-      sha256 "4bb27cc605838143cd6e07f97637b1439c6421b1290df6dcb3f2dd802908bda1"
+      url "https://github.com/suzuki-shunsuke/renovate-issue-action/releases/download/v0.3.2/renovate-issue-action_linux_arm64.tar.gz"
+      sha256 "8398c4fc442ee1cfeeb4b0a6b7236ceb9fc71780eb4845a8ba4286f0d3dfdddb"
 
       def install
         bin.install "renovate-issue-action"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/suzuki-shunsuke/renovate-issue-action/releases/download/v0.3.1/renovate-issue-action_linux_amd64.tar.gz"
-      sha256 "90fdd9f06cbafa89c4df735dce64f7411875146c46f1b0299d9e104fc4eb1176"
+      url "https://github.com/suzuki-shunsuke/renovate-issue-action/releases/download/v0.3.2/renovate-issue-action_linux_amd64.tar.gz"
+      sha256 "3f8c9b0cb857e514c1992ce39fad21fd4e5cc05cf9fb0b6deb4974e5badcdc9c"
 
       def install
         bin.install "renovate-issue-action"
